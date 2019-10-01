@@ -5,6 +5,10 @@ import java.util.Scanner;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.order.task.service.CuisineService;
+import com.order.task.service.DrinkService;
+import com.order.task.service.MealService;
+
 @Component
 public class ShowRoleChoice {
 	
@@ -12,6 +16,12 @@ public class ShowRoleChoice {
 	private ShowAdminMenu showAdminMenu;
 	@Autowired
 	private ShowUserMenu showUserMenu;
+	@Autowired
+	private MealService mealService;
+	@Autowired
+	private DrinkService drinkService;
+	@Autowired
+	private CuisineService cuisineService;
 
 	int count = 1;
 	
@@ -68,5 +78,11 @@ public class ShowRoleChoice {
 			e.printStackTrace();
 		}
 
+	}
+	
+	public void loadData() {
+		cuisineService.addDefaultCuisines();
+		mealService.addDefaultMeals();
+		drinkService.addDefaultDrinks();
 	}
 }

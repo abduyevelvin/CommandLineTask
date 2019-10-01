@@ -39,4 +39,9 @@ public class DrinkServiceImpl implements DrinkService {
 		drinkDAO.clearOrderedDrinks();
 	}
 
+	@Override
+	public void addDefaultDrinks() {
+		drinkDAO.addDefaultDrinks();
+	}
+
 }

@@ -29,4 +29,9 @@ public class CuisineServiceImpl implements CuisineService {
 		return cuisineDAO.getCuisine(id);
 	}
 
+	@Override
+	public void addDefaultCuisines() {
+		cuisineDAO.addDefaultCuisines();
+	}
+
 }

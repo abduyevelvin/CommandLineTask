@@ -49,4 +49,9 @@ public class MealServiceImpl implements MealService {
 		mealDAO.clearOrderedMeals();
 	}
 
+	@Override
+	public void addDefaultMeals() {
+		mealDAO.addDefaultMeals();
+	}
+
 }

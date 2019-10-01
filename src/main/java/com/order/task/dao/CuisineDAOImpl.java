@@ -13,6 +13,20 @@ public class CuisineDAOImpl implements CuisineDAO {
 	private List<Cuisine> cuisines = new ArrayList<Cuisine>();
 
 	@Override
+	public void addDefaultCuisines() {
+		Cuisine polish = new Cuisine("Polish");
+		polish.setId(1L);
+		Cuisine mexican = new Cuisine("Mexican");
+		mexican.setId(2L);
+		Cuisine italian = new Cuisine("Italian");
+		italian.setId(3L);
+		
+		cuisines.add(polish);
+		cuisines.add(mexican);
+		cuisines.add(italian);
+	}
+	
+	@Override
 	public List<Cuisine> getCuisines() {
 		return cuisines;
 	}

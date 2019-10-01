@@ -9,4 +9,5 @@ public interface CuisineService {
 	List<Cuisine> getCuisines();
 	Cuisine getCuisine(Long id);
 	void addCuisine(Cuisine cuisine);
+	void addDefaultCuisines();
 }

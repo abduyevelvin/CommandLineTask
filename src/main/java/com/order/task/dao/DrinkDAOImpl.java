@@ -1,5 +1,6 @@
 package com.order.task.dao;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,6 +14,20 @@ public class DrinkDAOImpl implements DrinkDAO {
 	private List<Drink> drinks = new ArrayList<Drink>();
 	private List<Drink> orderedDrinks = new ArrayList<>();
 
+	@Override
+	public void addDefaultDrinks() {
+		Drink polish = new Drink("Krupnik ", new BigDecimal(6.5));
+		polish.setId(1L);
+		Drink mexican = new Drink("Margarita", new BigDecimal(7.3));
+		mexican.setId(2L);
+		Drink italian = new Drink("Negroni", new BigDecimal(15));
+		italian.setId(3L);
+		
+		drinks.add(polish);
+		drinks.add(mexican);
+		drinks.add(italian);
+	}
+	
 	@Override
 	public List<Drink> getDrinks() {
 		return drinks;
@@ -63,5 +78,4 @@ public class DrinkDAOImpl implements DrinkDAO {
 	public void clearOrderedDrinks() {
 		orderedDrinks.clear();
 	}
-
 }

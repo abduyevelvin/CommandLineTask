@@ -11,4 +11,5 @@ public interface DrinkDAO {
 	void clearOrderedDrinks();
 	void addDrink(Drink drink);
 	void orderDrink(Long id);
+	void addDefaultDrinks();
 }

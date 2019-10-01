@@ -13,7 +13,7 @@ public class App {
 		AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(ApplicationConfig.class);
 		ShowRoleChoice showRoleChoice = ctx.getBean(ShowRoleChoice.class);
 
+		showRoleChoice.loadData();
 		showRoleChoice.roleChoice();
-
 	}
 }

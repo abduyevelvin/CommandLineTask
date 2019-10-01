@@ -13,4 +13,5 @@ public interface MealDAO {
 	void clearOrderedMeals();
 	void orderMeal(Long id);
 	boolean checkCuisineMeal(Long cuisineId);
+	void addDefaultMeals();
 }
